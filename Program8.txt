@@ -1,3 +1,8 @@
+/*Consider a message of 16 bytes (128 bits) and perform XOR operation with an initial round key [W0, W1, W2, W3] of size 128 bits to generate a state array in AES. w.r.t generated state array of size 128 bits, perform the following operations in each round.
+i.	Byte substitution using S-Box   
+ii.	ShiftRows using left shift  */
+
+
 #include <bits/stdc++.h>
 
 using namespace std;

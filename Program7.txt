@@ -1,3 +1,5 @@
+//Consider the 128 bits initial key and expand it to 10 different keys each of size 128 bits using AES key expansion technique.
+
 #include <bits/stdc++.h>
 
 using namespace std;

@@ -29,31 +29,33 @@ int bbs(int p, int q)
     long long x = (s*s) % n;
     for(int i=0; i<10; i++) // to generate 10 bit output
     {
-x = (x*x) % n;
+        x = (x*x) % n;
         B = B<<1 | (x & 1); // x%2 = x&1
     }
     cout<<"Blum Blum Shub"<<endl<<"--------------"<<endl;
 
     cout<<"p = "<< p <<"\nq = "<< q <<"\nn = "<< n <<"\ns = "<< s <<endl;
-return B; }
+    return B; 
+}
 // (a pow b) % n
 unsigned long long powModN(int a, int b, int n)
 {
+    unsigned long long res=1;
+    for(int i=0; i<b; i++)
+    {
+         res = ((unsigned long long)(res * a)) % n;
+    }
+    return res;
 }
-unsigned long long res=1;
-for(int i=0; i<b; i++)
-{
-res = ((unsigned long long)(res * a)) % n;
-}
-return res;
 string rabinMiller(int n)
 {
     int k = 0;        // power of 2
     int q = n-1;      // q -> odd
     while(q % 2 == 0) // until q becomes odd
     {
-q = q/2 ;
-k++ ; }
+         q = q/2 ;
+         k++ ; 
+    }
     int a = randInRange(1, n-1);
     cout << "\nRabin Miller(" << n << ")\n-----------------" << endl;
     cout << n-1 << " = 2^" << k << " * " << q << endl;

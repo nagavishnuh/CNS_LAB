@@ -15,8 +15,9 @@ int genPrime3mod4()
             if(num % i == 0)
             {
                 prime = false;
-break; }
-}
+                break;
+            }
+        }
         if(prime) return num;
     }
 }
